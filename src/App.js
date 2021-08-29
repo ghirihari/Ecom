@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header'
+import MainScreen from './Components/MainScreen';
+import SideBar from './Components/SideBar';
+
+import {useState} from 'react'
 
 function App() {
+  const [open, toggle] = useState(false) 
+  const tabs = ['Best Sellers','Categories','New Arrivals','Official Merchandise'];
+  let sidebarClass = (open===true)?'sidebar open':'sidebar' 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header open={open} toggle={toggle} tabs={tabs}/>
+      <SideBar class={sidebarClass} tabs={tabs}/>
+      <MainScreen toggle={toggle}/>
     </div>
   );
 }
