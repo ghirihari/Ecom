@@ -6,7 +6,7 @@ const Reviews = () => {
     ]
 
     return (
-        <div className="reviewWrapper">
+        <div className="reviewWrapper container">
             <div className="sub-title">- Recent Reviews -</div>
             <div className="reviewContainer">
                 <div className="review">                    

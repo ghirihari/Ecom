@@ -7,6 +7,10 @@
     padding: 0px 10px;
     justify-content: space-between;
   }
+  
+  .container{
+    margin: 10px 0px;
+  }
   .tab-container{
     display: none !important;
   }
@@ -37,6 +41,11 @@
     padding: 0px 10px;
     justify-content: space-evenly;
   }
+  
+  .container{
+    margin: 50px 200px;
+  }
+
   .listButton{
     display: none;
   }
@@ -48,6 +57,7 @@
     border-right: 1.5px solid #f0f0f0;
   }
   .reviewContainer{
+    margin: 20px 0px;
     display: flex;
     flex-direction: row;
   }  
@@ -120,7 +130,7 @@
   margin: 0px 5px;
 }
 
-.tab-container .tab-item:hover{
+.tab-item:hover{
   background: #f0f0f0;
 }
 
@@ -174,6 +184,7 @@
 }
 
 .button{
+  font-family: inherit;
   display: flex;
   align-items: center;
   border: 1px solid #e8e8e8;
@@ -222,7 +233,7 @@ input:focus{
   width: 80%;
   position: absolute;
   left: 0px;
-  margin-left: -80%;
+  margin-left: -100%;
   transition: margin 0.5s;
   overflow: hidden;
   padding: 15px 10px 0px 15px;
@@ -325,7 +336,7 @@ input:focus{
 .reviewWrapper{
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
 }
 
 .review{
@@ -344,13 +355,9 @@ input:focus{
   -webkit-box-orient: vertical;
 }
 
-.featuredContainer{
-  margin: 20px 0px;
-}
-
 .productFlex{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .product{
@@ -377,7 +384,7 @@ input:focus{
 }
 
 .product .description{
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   border: 2px solid #f1f1f1;
@@ -407,4 +414,19 @@ input:focus{
   padding: 5px;
   box-sizing: content-box;
   margin-left: 5px;
+}
+
+.productBar{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.productBar .tab-container{
+  justify-content: start;
+  color:#a0a0a0
+}
+
+.selected{
+  color: black;
 }
