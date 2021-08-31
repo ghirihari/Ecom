@@ -43,7 +43,7 @@
   }
   
   .container{
-    margin: 50px 200px;
+    margin: 50px 150px;
   }
 
   .listButton{
@@ -65,8 +65,8 @@
     flex-direction: row;
   }
   .product{
-    transition: transform 0.2s;
-    transform: scale(0.9);
+    /* transition: transform 0.2s;
+    transform: scale(0.9); */
   }
   
   
@@ -80,6 +80,8 @@
   font-family: 'Sora', sans-serif;
   font-weight: 500;
   font-size: 14px;
+
+  --color:-25px;
 }
 
 .title-container{
@@ -252,7 +254,8 @@ input:focus{
   flex-grow: 1;
   width: auto;
   background-color: white;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
 
 .sidebar .logoContainer{
@@ -364,6 +367,7 @@ input:focus{
   display: flex;
   flex-direction: column;
  
+  height: fit-content;
   background: #f1f1f1;
   border-radius: 10px;
   cursor: pointer;
@@ -374,16 +378,19 @@ input:focus{
 }
 
 .product:hover{
-  transform: scale(1);
+  --color: 0px;
+  /* transform: scale(1); */
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); */
 }
 
 .product .image{
-  padding: 10px;
+  position: relative;
+  padding: 10px 10px 0px 10px;
   align-self: center;
 }
 
 .product .description{
+  z-index: 1;
   /* width: 100%; */
   display: flex;
   flex-direction: row;
@@ -427,6 +434,22 @@ input:focus{
   color:#a0a0a0
 }
 
+.colors{
+  position: absolute;
+  bottom:var(--color);
+  right: 3px;
+  text-align: end;
+  transition: bottom 0.3s;
+}
+
 .selected{
+  color: black;
+}
+
+.footer{
+  padding: 10px 0px;
+  justify-content: center;
+  display: flex;
+  background-color: #e0e0e0;
   color: black;
 }
